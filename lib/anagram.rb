@@ -7,16 +7,15 @@ class Anagram
 
   end
 
+
   def match(match)
     @@ana.clear
     sentence = (match)
         sentence.each do |mixed|
-          x = mixed.split('') 
-          y = @word.split('')
-           if x.sort == y.sort
+          if mixed.split('').sort ==  @word.split('').sort
               @@ana << mixed
-            end
-        end
-        @@ana   
+          end
+         end
+    @@ana   
     end
 end
