@@ -5,7 +5,7 @@ class Anagram
 	end
 	
 	def match(array)
-		array.detect { |x| x.scan(/[A-Za-z]/).sort == @word.scan(/[A-Za-z]/).sort }
+		array = array.select { |x| x.scan(/[A-Za-z]/).sort == @word.scan(/[A-Za-z]/).sort }
 	end
 	
 end
