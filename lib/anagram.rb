@@ -7,26 +7,7 @@ class Anagram
   end
 
   def match(array)
-    array.select {|x| x.chars.sort.join == word.chars.sort.join}
+    array.select {|x| x.chars.sort == word.chars.sort}
   end
 
 end
-
-
-
-# # Your code goes here!
-
-# array = ["enlists", "googxle", "inlets", "banana"]
-
-# array.collect {|x| x.chars.sort.join == word.chars.sort.join}
-
-
-# sorted_array = array.collect{|x| x.chars.sort.join}
-# sorted_array.include?(word.chars.sort.join)
-
-
-
-# array.select {|x| x.chars.sort.join == word.chars.sort.join}
-
-
-
