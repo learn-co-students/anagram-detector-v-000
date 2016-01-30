@@ -11,16 +11,15 @@ end
 
 def match(array)
   new = []
-    array.each do |x| 
-    y = x.split("").sort
-    z = @words.split("").sort
+  array.each do |x| 
+  y = x.split("").sort
+  z = @words.split("").sort
   
-  if y == z
-    new << x.to_s
+    if y == z
+      new << x.to_s
       end
     end
-    new
+  new
   end
-
 end
 
