@@ -10,16 +10,16 @@ def initialize(words)
 end
 
 def match(array)
-  new = []
+  ary = []
   array.each do |x| 
   y = x.split("").sort
   z = @words.split("").sort
   
     if y == z
-      new << x.to_s
+      ary << x.to_s
       end
     end
-  new
+    ary
   end
 end
 
