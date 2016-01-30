@@ -17,8 +17,6 @@ def match(array)
   
   if y == z
     new << x.to_s
-    
-  
       end
     end
     new
@@ -26,6 +24,3 @@ def match(array)
 
 end
 
-#angrm_array = %W(#{words})
- # angrm_array.map do |x|
- #  y = x.split("")
