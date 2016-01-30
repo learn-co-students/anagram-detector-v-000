@@ -10,6 +10,19 @@ def initialize(words)
 end
 
 def match(array)
+  array.select { |x| x.split("").sort == words.split("").sort}
+  end
+end
+
+
+
+
+
+
+
+=begin
+
+def match(array)
   ary = []
   array.each do |x| 
   y = x.split("").sort
@@ -22,4 +35,7 @@ def match(array)
     ary
   end
 end
+
+=end
+
 
