@@ -1,19 +1,26 @@
+
 class Anagram
-  attr_accessor :word, :word_list
-  matchedlist = []
-  wordsplit = []
+  attr_accessor :word #
+
 
   def initialize(word)
     @word = word
-    @word_list = word_list
-    #word = self.create
-    #wordsplit << word.split.sort
   end
-  def self.match(word_list)
-    word_list.split(" ") do |words|
-      matchedlist << words.scan[/\w/]
+
+
+def match(wordlist)
+    matchedlist = []
+    wordsplit = []
+    wordlist.select.each do |to_match|
+      if to_match.split(//).sort == @word.split(//).sort
+       matchedlist << to_match
+      end
+      matchedlist
     end
+    matchedlist
   end
+
+
 
 
 #   def self.match(word_list)
