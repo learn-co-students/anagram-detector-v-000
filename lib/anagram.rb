@@ -10,10 +10,10 @@ class Anagram
   def match(words) 
     array = []
     words.each do |x|
-    if x.chars.sort == word.chars.sort
-      array.push(x)
+      if x.chars.sort == word.chars.sort
+        array.push(x)
+      end
     end
-  end
     array
   end
 
