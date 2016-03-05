@@ -1,4 +1,3 @@
-# Re-making a pull request as it keeps glitching. very annoying!
 class Anagram
 
   attr_accessor :word
