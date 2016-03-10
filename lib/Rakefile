@@ -1,0 +1,11 @@
+require_relative 'anagram'
+require 'rake'
+require 'pry'
+
+def reload!
+  load 'anagram.rb'
+end
+
+task :console do
+  Pry.start
+end
