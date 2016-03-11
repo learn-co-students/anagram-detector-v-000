@@ -20,7 +20,7 @@ class Anagram
 
 #more simplified version of above
   def match(array)
-    array.detect {|word| word.split("").sort == @word.split("").sort}
+    array.select {|jumbled| jumbled.split("").sort == @word.split("").sort}
   end
-  
+
 end
