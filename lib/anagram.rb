@@ -1,14 +1,13 @@
 class Anagram
-  attr_accessor :name, :artist_name
 
-    def initialize(word)
-    @word = word
-    @artist = artist
-    @genre = genre
-    @@count +=1
-    @@genres << genre
-    @@artists << artist
-  end
+  attr_accessor :name
 
+  def initialize(word)
+    @name = word 
+  end   
 
-end
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+
+end 
