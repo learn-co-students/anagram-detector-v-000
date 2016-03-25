@@ -6,10 +6,7 @@ class Anagram
   end
 
   def match(test_array)
-    anagram_array = []
-    test_array.map! { |word| word.split("").sort } #=> array of sorted letters
-    test_array.each { |letters| anagram_array << letters == @word.split("").sort }
-    anagram_array
+    test_array.select { |letters| letters.split("").sort == @word.split("").sort }
   end
 
 end
