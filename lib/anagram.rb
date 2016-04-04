@@ -17,7 +17,6 @@ class Anagram
   # takes array of possible anagrams. Return array of any/all matches.
   def match(anagram_ary)
    match_ary = []
-
    anagram_ary.each do |anagram|
      if word.split('').sort == anagram.split('').sort
        match_ary << anagram
@@ -25,4 +24,9 @@ class Anagram
    end
     match_ary
   end
+
+# learn solution - DUH!
+#  def match(array)
+#    array.select {|x| x.split("").sort == @name.split("").sort}
+#  end
 end
