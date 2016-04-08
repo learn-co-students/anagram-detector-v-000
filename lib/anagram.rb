@@ -13,6 +13,7 @@ class Anagram
     #   end
     # end
     # matching_words.compact
+    
     array.select { |word| word.split("").sort == @word.split("").sort}
   end
 end
