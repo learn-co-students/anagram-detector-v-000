@@ -8,9 +8,10 @@ class Anagram
   end
 
   def match(array)
+    word_letters = @word.split(//).sort
     matches = []
     array.each { |word|
-      if word.split(//) == @word.split(//)
+      if word.split(//).sort == word_letters
         matches << word
       end
     }
