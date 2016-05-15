@@ -8,15 +8,9 @@ class Anagram
   end
 
   def match(arr)
-    class_word = @word.split("").sort
-    arr.each do |i|
-      if arr[i].split("").sort == class_word
-        return_word = arr[i].join
-      else
-        nil
-      end
+    arr.select do |i|
+      arr[i].split("").sort == @word.split("").sort ? arr[i].join : nil
     end
-    return_word
   end
 
 end
