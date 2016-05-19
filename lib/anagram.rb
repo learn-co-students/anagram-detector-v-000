@@ -13,12 +13,9 @@ class Anagram
     matches.each do |match|
       if match.split("").sort == @word.split("").sort
         match_array << match
-        return match_array
-      else
-        return match_array
       end
     end
+    match_array
   end
-
 
 end
