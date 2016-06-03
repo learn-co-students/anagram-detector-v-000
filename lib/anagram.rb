@@ -9,7 +9,6 @@ class Anagram
 	end
 
 	def match(list)
-		match_words = []
 		list.select do |i|
 			i.split("").sort == @word.split("").sort
 	end
