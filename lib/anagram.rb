@@ -10,12 +10,10 @@ class Anagram
 
 	def match(list)
 		match_words = []
-		list.map do |i|
-			if i.split("").sort == @word.split("").sort
-				match_words << i
-			end
-		end
-		match_words
+		list.select do |i|
+			i.split("").sort == @word.split("").sort
+	end
+	
 	end
 
 
