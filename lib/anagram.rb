@@ -7,11 +7,8 @@ class Anagram
   end
 
   def match(array)
-    new_array = array.dup.collect do |item|
-      item = item.split("").sort {|a, b| a <=> b}.join("")
+    array.select do |item|
+      item.split("").sort {|a, b| a <=> b}.join("") == @word.split("").sort {|a, b| a <=> b }.join("")
     end
-    word = @word.split("").sort {|a, b| a <=> b }.join("")
-    new_array = new_array.each_with_index.select { |item, index| item == word }
-    [array[new_array[0][1]]] ? [array[new_array[0][1]]] : []
   end
 end
