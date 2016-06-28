@@ -13,6 +13,8 @@ class Anagram
       end
     end
     match_result
+    # alternative 1 line solution (much more elloquent)
+    # array.select {|x| x.split("").sort == @name.split("").sort}
   end
 
 end
