@@ -9,14 +9,14 @@ class Anagram
 
   def match(words)
     match_word = []
+    the_match = []
     words.each { |word|
       match_word = word.scan /\w/
       if match_word.sort == @match.sort
-        #word
+        the_match << word
       end
     }
-    match_word = words[0].scan /\w/
-    match_word.sort
+    the_match
 
   end
 end
