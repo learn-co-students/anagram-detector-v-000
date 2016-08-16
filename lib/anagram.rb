@@ -17,5 +17,4 @@ class Anagram
     }
     @match.sort
   end
-
 end
