@@ -15,8 +15,8 @@ class Anagram
         #word
       end
     }
-    @match
-    
+    @match.sort
+
   end
 
 end
