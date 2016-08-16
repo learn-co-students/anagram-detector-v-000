@@ -15,7 +15,7 @@ class Anagram
         #word
       end
     }
-    @@match
+    @match
   end
 
 end
