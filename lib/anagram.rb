@@ -15,8 +15,8 @@ class Anagram
         #word
       end
     }
-    @match.
+    match_word = words[0].scan /\w/
+    match_word.sort
 
   end
-
 end
