@@ -1,4 +1,3 @@
-
 class Anagram
   attr_accessor :word, :list, :matches
 
@@ -8,7 +7,6 @@ class Anagram
 
   def match(list)
     @srt_word = ""
-    @srt_item = ""
     @matches = []
     @srt_word = @word.split("").sort
     list.each do|item| 
