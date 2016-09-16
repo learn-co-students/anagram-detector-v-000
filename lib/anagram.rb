@@ -8,13 +8,8 @@ attr_reader :word
     @word = word
   end
 
-  def match(words)
-    words.select do |each_word|
-      each_word = each_word.split(//)
-      if result = each_word.sort == @word.split(//).sort
-        result
-      end
-    end
+  def match(array)
+    array.select {|each_word| each_word.split(//).sort == @word.split(//).sort }
   end
 
 end
