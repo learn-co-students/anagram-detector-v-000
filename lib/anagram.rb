@@ -8,12 +8,13 @@ class Anagram
   end
 
   def match(anagrams_array)
-    anagrams_array.map! do |word|
-      if @word.split("").sort == word.split("").sort
-        word
-      end
-    end
-    anagrams_array.compact
+    anagrams_array.select{|x| x.split("").sort == @word.split{""}.sort}
+    # anagrams_array.map! do |word|
+    #   if @word.split("").sort == word.split("").sort
+    #     word
+    #   end
+    # end
+    # anagrams_array.compact
   end
 
 end
