@@ -1,4 +1,3 @@
-# Your code goes here!
 class Anagram
 	attr_accessor :word
 
@@ -6,11 +5,12 @@ class Anagram
 		@word = word
 	end
 
-	def match(sentence)
-	    word_split = @word.split("").sort
-	    sentence.find_all {|sentence_word| sentence_word.split("").sort == word_split.sort}
-	    
+	def match(anagrams)
+	  word_split = @word.split("").sort
+	  anagrams.find_all do |anagrams_word|
+	  	anagrams_word.split("").sort == word_split.sort
+		end
 	end
 
-end
 
+end
