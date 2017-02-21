@@ -6,13 +6,9 @@ class Anagram
   end
 
   def match(words)
-    matching = []
     words.select do |word|
-      if word.length == @word.length && word.split("").sort == @word.split("").sort
-        matching << word
-      end
+      word.length == @word.length && word.split("").sort == @word.split("").sort
     end
-    matching
   end
 
 end
