@@ -11,6 +11,6 @@ class Anagram
   end
 
   def match(list)
-    list.select { |word| word_array(word) == word_array(@word) }
+    list.select { |word| self.word_array(word) == self.word_array(@word) }
   end
 end
