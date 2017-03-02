@@ -12,12 +12,8 @@ class Anagram
   end
 
   def match(array_of_anagrams)
-    array = array_of_anagrams
-    sorted_word = @word.chars.sort.join
-    result = []
-    array.find_all do |anagram|
-      sorted_anagram = anagram.chars.sort.join
-      sorted_word == sorted_anagram
+    array_of_names.find_all do |anagram|
+      @word.chars.sort.join == anagram.chars.sort.join
     end
   end
 end
