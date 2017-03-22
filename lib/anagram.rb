@@ -5,4 +5,8 @@ class Anagram
     @words = words
   end
 
+def match(anagram_aray)
+  anagram_aray = []
+end
+
 end
