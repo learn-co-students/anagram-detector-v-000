@@ -1,3 +1,4 @@
+require 'pry'
 class Anagram
   attr_accessor :words
 
@@ -6,7 +7,7 @@ class Anagram
   end
 
 def match(anagram_array)
-  anagram_array.select { |w| w.split("").sort == @word.split("").sort }
+  anagram_array.select { |w| w.split("").sort == @words.split("").sort }
 end
 
 end
