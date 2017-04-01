@@ -8,11 +8,17 @@ class Anagram
   end
 
   def match(array)
-    no_matches = []
-    array.each do |word|
-      word.split(",").sort == @word.split(" ").sort
-    # binding.pry
-    end
+    matches = []
+    array.each {|w| matches.push(w) if w.split("").sort.join("") == @word.split("").sort.join("")}
+    matches
   end
+
+  # def match(array)
+  #   matches = []
+  #   array.each do |w|
+  #   matches.push(w) if w.split("").sort.join("") == @word.split("").sort.join("")
+  #   end
+  #   matches
+  # end
 
 end
