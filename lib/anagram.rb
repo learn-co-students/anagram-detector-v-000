@@ -19,4 +19,9 @@ class Anagram
     given_word.split("").sort.join
   end
 
+  #OR superlight way to solve this lab - think more, do less!!!
+  #def match(array)
+  #  array.select {|x| x.split("").sort == @name.split("").sort}
+  #end
+
 end
