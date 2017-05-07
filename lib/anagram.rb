@@ -8,13 +8,7 @@ class Anagram
 
   def match(list)
     @letters = word.split("").sort
-    anagrams = []
-    list.each{|w|
-    if w.split("").sort == @letters
-      anagrams << w
-    end
-    }
-    anagrams
+    list.select {|w| w.split("").sort == @letters}
   end
-
+  
 end
