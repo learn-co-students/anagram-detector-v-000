@@ -38,7 +38,3 @@ class Anagram
     end
 
 end
-
-detector = Anagram.new('allergy')
-allergy = detector.match %w(gallery ballerina regally clergy largely leading, bells, whistles, largely, largely)
-puts "allergy is #{allergy}"
