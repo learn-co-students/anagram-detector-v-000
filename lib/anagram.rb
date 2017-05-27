@@ -8,14 +8,7 @@ class Anagram
   end
 
   def match(anagrams)
-    match = []
-    anagrams.collect do |i|
-      if i.chars.sort.join == @word.chars.sort.join
-        match << i
-      end
-    end
-    match 
-
+    anagrams.select {|i| i.chars.sort.join == @word.chars.sort.join}
   end
 
 
