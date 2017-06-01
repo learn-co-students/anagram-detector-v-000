@@ -20,6 +20,3 @@ class Anagram
           ana
         end
 end
-
-
-Anagram.new('diaper').match(["hello", "world", "zombies", "pants", "dipper"])
