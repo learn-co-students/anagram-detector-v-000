@@ -7,12 +7,15 @@ class Anagram
   end
 
   def match(word_list)
-    match_array = []
+    anagram_array = []
+    # @word instance variable split to array and sorted for comparison
     word_sorted = @word.split("").sort
+    # Iterate through argument word list looking for anagram of @word instance.
     word_list.map do |word|
-      match_array << word if word.split("").sort == word_sorted
+      anagram_array << word if word.split("").sort == word_sorted
     end
-    match_array
+    # Return array of anagrams found
+    anagram_array
   end
 
 end
