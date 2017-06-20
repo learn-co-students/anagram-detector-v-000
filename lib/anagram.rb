@@ -1,3 +1,4 @@
+
 class Anagram
   attr_accessor :word
 
@@ -6,15 +7,13 @@ class Anagram
     end
 
     def match(array)
-      matches = []
-      array.each do |word_to_check|
-        word_array = word_to_check.split("").sort
-        detector_array = @word.split("").sort
-          if word_array.sort == detector_array.sort
-            matches << word_to_check
+        matches = []
+        array.each do |word_to_check|
+          if word_to_check.split("").sort ==  @word.split("").sort
+              matches << word_to_check
           end
         end
-      matches
+        matches
     end
 
 end
