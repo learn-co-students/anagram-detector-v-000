@@ -5,16 +5,7 @@ class Anagram
 		@word = word
 	end
 
-	def sorted_word_array
-		@word.split("").sort
-	end
-
 	def match(word_array)
-		anagram = word_array.map do |w|
-			if w.split("").sort == sorted_word_array
-				w
-			end
-		end
-		anagram.compact
+		word_array.select { |w| w.split("").sort == @word.split("").sort }
 	end
 end
