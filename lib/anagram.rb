@@ -7,8 +7,8 @@ class Anagram
        @word = word
      end
      
-     def match([])
-          if array.match
+     def match(array)
+          #if array.match
           # it should take an array of possible anagrams and return all matches in an array.
           # if none exist it should return an empty array
           #iterate over the array after spliting and sorting to an array of letters it a-z to compair it. 
