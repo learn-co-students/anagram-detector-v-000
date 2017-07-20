@@ -11,6 +11,6 @@ class Anagram
   end
 
   def sort_word(w)
-    w.split("").sort{|x, y| x <=> y}
+    w.split("").sort{|x, y| x <=> y}.join("")
   end
 end
