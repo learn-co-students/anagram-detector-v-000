@@ -19,3 +19,6 @@ class Anagram
     anagrams
   end
 end
+
+#more eloquent version:
+#array.select {|x| x.split("").sort == @name.split("").sort}
