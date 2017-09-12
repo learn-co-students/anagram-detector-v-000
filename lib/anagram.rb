@@ -7,13 +7,13 @@ class Anagram
   end
 
   def match(list)
-    @srt_word = ""
-    @srt_item = ""
+    @sorted_word = ""
+    @sorted_item = ""
     @matches = []
-    @srt_word = @word.split("").sort
-    list.each do|item| 
-      if item.split("").sort == @srt_word;
-        @matches << item 
+    @sorted_word = @word.split("").sort
+    list.each do|list_word| 
+      if list_word.split("").sort == @sorted_word;
+        @matches << list_word
         end
       end
      @matches
