@@ -9,17 +9,19 @@ class Anagram
   end
 
   def match(check_words)
+    result = []
+    word_split = @word.split("")
     check_words.each do |index|
-      word_from_index = index.split("")
-      original_word = @word.split("")
-      original_word.each do |index|
-        word_from_index.include?(index)
-        binding.pry
+      check_words_letters = index.split("")
+      @intersection = check_words_letters & word_split #gives me all the matches in a new array (not picking up duplicates)
+      if @intersection.length == index.length #comparing matches length to index length
+        result << index
       end
     end
+    result
   end
 
 end
 
-listen = Anagram.new("listen")
-listen.match(%w(enlists google inlets banana))
+listen = Anagram.new("allergy")
+listen.match(%w(gallery regally largely))
