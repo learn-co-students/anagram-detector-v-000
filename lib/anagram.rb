@@ -4,10 +4,9 @@ class Anagram
   def initialize(detector)
     @detector = detector
   end
-detector = Anagram.new(detector)
 
   def match(words)
       detector.chars.sort
-      words.select{ |word| word.chars.sort == detector.chars.sort}.map{ |word| word}
+      words.select{ |word| word.chars.sort == detector.chars.sort}
 end
 end
