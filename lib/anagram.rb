@@ -13,7 +13,7 @@ class Anagram
       array_word.split(//)
 
 
-
+#https://apidock.com/ruby/Array/include%3F
     end
   end
 
