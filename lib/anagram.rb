@@ -33,3 +33,6 @@ end
 
 #https://stackoverflow.com/questions/5286861/how-to-break-from-nested-loops-in-ruby
 # RESOURCE for "next" in ruby
+
+#SOLUTION FROM FLATIRON
+# array.select {|x| x.split("").sort == @name.split("").sort}
