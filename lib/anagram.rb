@@ -1,12 +1,16 @@
 class Anagram
     
-      attr_accessor :initializing_word
+    attr_accessor :initializing_word
     
-      def initialize(initializing_word)
+    def initialize(initializing_word)
         @initializing_word = initializing_word
-      end
-    
+        word_array.each do |word| word.split(//)
+        if initializing_word.match(word_array).sort == true
+        word
+            end
+        end
     end
+end
     
     #     word_array.each do |word| word.split(//)
     # #
