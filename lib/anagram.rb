@@ -1,17 +1,36 @@
+require 'pry'
+
 class Anagram
     
     attr_accessor :initializing_word
     
     def initialize(initializing_word)
         @initializing_word = initializing_word
-        word_array.each do |word| word.split(//)
-        if initializing_word.match(word_array).sort == true
-        word
-            end
-        end
     end
+
+    def match(word_array) 
+        word_array.collect {|word| word.split(//).sort}
+        sorted_word = initializing_word.split(//).sort
+        # word_array.each do |array| 
+        # if array == sorted_word
+        #     array
+           
+            
+        end       
+     end
+      binding.pry
 end
+
+# def match(word_array) 
+#     word_array.each do |word| word.split(//).sort
+#     sorted_word = initializing_word.split(//).sort
+#     # binding.pry   
+#     if sorted_word == word
+#     word
     
+#      end 
+#     end       
+# end
     #     word_array.each do |word| word.split(//)
     # #
     #       .sort
