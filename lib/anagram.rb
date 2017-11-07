@@ -6,10 +6,6 @@ class Anagram
   end
 
   def match(check_words)
-    matches = []
-    check_words.each do |option|
-      matches << option if option.split("").sort == @word.split("").sort
-    end
-    matches
+    check_words.find_all {|option| option.split("").sort == @word.split("").sort}
   end
 end
