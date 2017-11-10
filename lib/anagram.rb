@@ -1,19 +1,14 @@
-# Your code goes here!
 class Anagram
   attr_accessor :word
-
-  def matches
-    @matches
-  end
+  attr_reader :match
 
   def initialize(word)
     @word = word
   end
 
   def match(anagrams)
-  anagrams.find_all do |anagram|
-    anagram.split("").sort == @word.split("").sort
+    anagrams.select do |anagram|
+      anagram.split("").sort == @word.split("").sort
+    end
   end
-end
-
 end
