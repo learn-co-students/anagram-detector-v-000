@@ -6,6 +6,6 @@ class Anagram
   end
 
   def match(list)
-    list.map { |possible_anagram| possible_anagram if possible_anagram.split("").sort == word.split("").sort }.compact
+    list.select { |possible_anagram| possible_anagram.split("").sort == word.split("").sort }
   end
 end
