@@ -8,11 +8,9 @@ class Anagram
   end
 
   def match(array)
-    matches = array.collect do |item|
-      @word.chars.sort == item.chars.sort ? item : " "
+    array.select do |item|
+      @word.chars.sort == item.chars.sort
     end
-    matches.delete(" ")
-    matches
   end
 
 end
