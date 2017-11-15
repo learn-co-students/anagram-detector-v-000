@@ -8,7 +8,7 @@ end
 
 def match(array)
   array.find_all do |string|
-    word.split("").sort == string.split("").sort
+    @word.split("").sort == string.split("").sort
   end
 end
 
