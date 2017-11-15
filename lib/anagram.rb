@@ -13,7 +13,3 @@ def match(array)
 end
 
 end
-
-
-# expected functionality -listen = Anagram.new("listen")
-# listen.match(%w(enlists google inlets banana))     => ["inlets"]
