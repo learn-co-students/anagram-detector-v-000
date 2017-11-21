@@ -17,9 +17,8 @@ class Anagram
 # create instance methods 
     def match(word_list) # word_list is an array
         binding.pry
-        @anagram_list.split("").sort 
-        word_list.each do |w| 
-            w.to_s
+        new_anagram = @anagram_list.split("").sort 
+        
         end 
       # what does an anagram match look like? - try matching the set of letters passed through the method
       # all anagrams are the same when sorted
