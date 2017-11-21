@@ -7,8 +7,11 @@
 # create Anagram class
 class Anagram
 # attr_accessor - not sure which one yet, but should be included in class
+  attr_accessor :anagram_list 
 # initialize with word 
-  
+    def initialize(word)
+      @anagram_list = word 
+    end 
 # create instance methods 
 # method should receive and array of possible anagrams
 # method should match anagrams with the value passed through the word argument 
