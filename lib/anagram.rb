@@ -16,13 +16,14 @@ class Anagram
     end 
 # create instance methods 
     def match(word_list) # word_list is an array
-        binding.pry
+      
         new_anagram = @anagram_list.split("").sort 
       # go through the word list array and split then sort each index
         new_word_list = word_list.map {|w| w.split("").sort}
         if new_word_list.include?(new_anagram)
-          select_word = new_word_list.select {|match| match == new_anagram}
-          select_word.join
+          @select_word = new_word_list.select {|match| match.join == new_anagram}
+          #@select_word.join
+              
         else
         new_word_list.clear
         end
