@@ -1,3 +1,4 @@
+require 'pry'
 # Your code goes here!
 
 # Write a program that, given a word and a list of possible anagrams, selects the correct one(s).
@@ -14,7 +15,12 @@ class Anagram
       @anagram_list = word 
     end 
 # create instance methods 
-    def match(word_list) 
+    def match(word_list) # word_list is an array
+        binding.pry
+        @anagram_list.split("").sort 
+        word_list.each do |w| 
+            w.to_s
+        end 
       # what does an anagram match look like? - try matching the set of letters passed through the method
       # all anagrams are the same when sorted
 #       - split the words in multiple arrays 
