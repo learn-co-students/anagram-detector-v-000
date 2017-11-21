@@ -15,7 +15,12 @@ class Anagram
     end 
 # create instance methods 
     def match(word_list) 
-      # what does an anagram match look like?  
+      # what does an anagram match look like? - try matching the set of letters passed through the method
+      # all anagrams are the same when sorted
+#       - split the words in multiple arrays 
+#       - sort arrays
+#       - check for matches 
+      word_list.sort
      # this method should go through word_list array and detect if there are any anagram matches 
     end 
 # method should receive and array of possible anagrams
