@@ -16,16 +16,23 @@ class Anagram
     end 
 # create instance methods 
     def match(word_list) # word_list is an array
-        binding.pry
-        new_anagram = @anagram_list.split("").sort 
         
-        end 
+        new_anagram = @anagram_list.split("").sort 
+      # go through the word list array and split then sort each index
+        new_word_list = word_list.map {|w| w.split("").sort}
+        if new_word_list.include?(new_anagram)
+          @anagram_list
+        else
+        new_word_list.clear
+        end
+        
+        
       # what does an anagram match look like? - try matching the set of letters passed through the method
       # all anagrams are the same when sorted
 #       - split the words in multiple arrays 
 #       - sort arrays
 #       - check for matches 
-      word_list.sort
+      
      # this method should go through word_list array and detect if there are any anagram matches 
     end 
 # method should receive and array of possible anagrams
