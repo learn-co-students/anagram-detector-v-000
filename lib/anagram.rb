@@ -14,8 +14,9 @@ class Anagram
       @anagram_list = word 
     end 
 # create instance methods 
-    def match 
-      
+    def match(word_list) 
+      # what does an anagram match look like?  
+     # this method should go through word_list array and detect if there are any anagram matches 
     end 
 # method should receive and array of possible anagrams
 # method should match anagrams with the value passed through the word argument 
