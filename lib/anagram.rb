@@ -1,5 +1,3 @@
-# Your code goes here!
-
 require 'pry'
 
 class Anagram
@@ -16,6 +14,5 @@ class Anagram
       @word.split("").sort == x.split("").sort
     end
   end
-
 
 end
