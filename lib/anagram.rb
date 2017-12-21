@@ -16,4 +16,9 @@ class Anagram
     end
     matching
   end
+
+  # refactor solution using .select
+  def match(array)
+    array.select {|w| w.split("").sort == word.split("").sort}
+  end
 end
