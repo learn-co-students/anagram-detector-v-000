@@ -7,12 +7,10 @@ class Anagram
 
   def match(array)
     list = []
-
     array.each do |wurd|  #split array, and for each item (wurd):
-      if wurd.chars.sort == word.chars.sort
-        list << wurd
-      end
+      list << wurd if wurd.chars.sort == word.chars.sort
     end
     return list
   end
+  
 end
