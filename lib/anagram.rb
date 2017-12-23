@@ -5,11 +5,11 @@ class Anagram
     @word = word
   end
 
-  def match(array)    #array of words being passed into match method
+  def match(array)
     list = []
 
     array.each do |wurd|  #split array, and for each item (wurd):
-      if wurd.split("").sort() == word.split("").sort
+      if wurd.chars.sort == word.chars.sort
         list << wurd
       end
     end
