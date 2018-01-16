@@ -46,3 +46,6 @@ class Anagram
     end.compact
   end
 end
+
+#Enumberable used. collect
+#Built in objects, methods - split to manipulate string. sort to manipulate array.
