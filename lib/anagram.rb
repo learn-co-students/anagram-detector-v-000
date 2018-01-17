@@ -2,14 +2,15 @@
 class Anagram
   attr_accessor :word
 
-  def initialize
+  def initialize(word)
     @word  = word
   end
 
-  def match
-    string = "hello world zombies pants dipper"
-    split_word = word.split("").sort
-    string.split(" ").collect{|w| w.sort =  word.split("").sort}
+  def match(string)
+    string.select{|w| w.split("").sort   ==  @word.split("").sort}
+    #puts matched
   end
-
-end 
+end
+string = ["padi", "dipa", "zombies", "pants" "diap"]
+diaper = Anagram.new("diap")
+diaper.match(string)
