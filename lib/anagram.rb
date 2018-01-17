@@ -6,6 +6,6 @@ class Anagram
   end
 
   def match(words)
-    words.select { |w| w.split("").sort == @word.split("").sort}  #Break up words and sort by order, if it matches than it's an anagram!
+    words.detect { |w| w.split("").sort == @word.split("").sort}  #Break up words and sort by order, if it matches than it's an anagram!
   end
 end
