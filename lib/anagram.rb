@@ -11,7 +11,7 @@ class Anagram
     #return an array of anagrams
 
     possible_anagrams.select do |possible|
-      possible.sort == word.sort
+      possible.split("").sort == word.split("").sort
     end
 
   end
