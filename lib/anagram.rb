@@ -1,1 +1,24 @@
 # Your code goes here!
+class Anagram
+  attr_accessor :word
+  
+  def initialize(word)
+    @word = word
+  end
+  
+  def match(maybe_anagram_array)
+    matches = []
+    match_word_array = word.split("")
+    maybe_anagram_array.map!{|i| i.split("")
+      #if the item contains all the same letters that @word does
+      #then push the item to an array of matches
+      i.all?{|item| match_word_array.include?(item)
+        matches << item.join("")
+      }
+    }
+    return matches
+    #if array = [] after the loop then return false 
+    #else return matches array
+  end
+  
+end
