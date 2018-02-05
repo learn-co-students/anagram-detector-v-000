@@ -8,7 +8,7 @@ class Anagram
 
   def match(some_words)
     some_words.find_all do |maybe_match|
-      word.split("").sort.join == maybe_match.split("").sort.join
+      word.split("").sort == maybe_match.split("").sort
     end
   end
 
