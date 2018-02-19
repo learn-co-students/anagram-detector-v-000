@@ -7,7 +7,7 @@ attr_accessor :word
 
   def match(word_list)
     word_list.select do |ele|
-      ele.chars.sort == word.chars.sort
+      ele.chars.sort == @word.chars.sort
     end
   end
 end
