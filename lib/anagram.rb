@@ -12,8 +12,6 @@ class Anagram
     array.select do |w|
       if w.split("").sort == @word.split("").sort 
         @@anagrams << w
-      else
-        @@anagrams
       end 
     end 
   end 
