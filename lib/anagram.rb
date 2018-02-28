@@ -6,6 +6,9 @@ class Anagram
   end
 
   def match(word_list)
+    # => Refactored
+    # array.select {|x| x.split("").sort == @name.split("").sort}
+    
     result = []
     word_list.each do |word|
       if word.length == @word.length
