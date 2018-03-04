@@ -10,16 +10,15 @@ class Anagram
   def match(possibles)
 
     possibles.select {|str| word.split('').sort == str.split('').sort}
-    # or 1)
+    # or 2)
     # possibles.keep_if {|str| word.split('').sort == str.split('').sort}
-    # or2)
-# this also works in repl.it but not according to these tests
+    # or 3)
+# this also works but not if you take out the .join - if you remove.join it doesn't pass rspec but only returns sorted words and not orig words
 # def match
-#     @possibles = possibles
-#     new_word = @word.split('').sort
-#     new_arr = possibles.collect {|x| x.split(('')).sort}
-#     new_arr.select {|str| new_word == str}
-# end
+  #   @possibles = possibles
+  #   new_word = word.split('').sort.join
+  #   new_arr = possibles.collect {|x| x.split('').sort.join}
+  #   new_arr.select {|str| new_word == str}
   end
 
 end
