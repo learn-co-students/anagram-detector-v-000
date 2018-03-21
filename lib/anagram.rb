@@ -2,22 +2,16 @@
 require 'pry'
 
 class Anagram
-  attr_reader :word
+  attr_accessor :word
 
-  def initialize(word)
-    @word = word
+  def initialize(string)
+    @word = string
   end
 
   def match(possible_anagrams)
-
-    anagram_match = []
-
-    possible_anagrams.each do |possible_anagram|
-      if possible_anagram.split("").sort == word.split("").sort
-        anagram_match << possible_anagram
-      end
+    possible_anagrams.select do |possible_anagram|
+      possible_anagram.split("").sort == @word.split("").sort
     end
-    anagram_match
   end
 end
 
