@@ -8,7 +8,7 @@ class Anagram
 
   def match(other)
     other.find_all do |letters|
-      if letters.chars.sort == self.word.chars.sort
+      if letters.chars.sort == word.chars.sort
         letters
       end
     end
