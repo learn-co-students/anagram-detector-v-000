@@ -7,12 +7,11 @@ class Anagram
   end
 
   def match(array)
-    array.map do |anagram|
-      possible_matches = anagram.split("")
-        x= possible_matches.sort
-        y = word.split.sort
-        if x == y
-          x
+    array.select do |anagram|
+      possible_match = anagram.split("")
+        y = word.split("").sort
+        if possible_match.sort == y
+          possible_match
       end
     end
   end
