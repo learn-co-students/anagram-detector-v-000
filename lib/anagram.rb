@@ -1,4 +1,4 @@
-# Your code goes here!
+require 'pry'
 class Anagram
   attr_accessor :word
 def initialize(word)
@@ -6,9 +6,10 @@ def initialize(word)
 end
 
 def match(words_array)
-  words_array.each do |w|
-  if word[0..-1] == w[-1..0]
-    return w
+  words_array.delete_if do |w|
+  word.split("").sort != w.split("").sort
   end
+
 end
+
 end
