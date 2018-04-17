@@ -8,9 +8,6 @@ class Anagram
 
   def match(anagrams)
     anagram_array = Array.new
-    anagrams.each do |anagram|
-      anagram.split("").sort == @word.split("").sort ? anagram_array << anagram : false
-    end
-    anagram_array
+    anagrams.each { |anagram| anagram.split("").sort == @word.split("").sort ? anagram_array << anagram : false } && anagram_array
   end
 end
