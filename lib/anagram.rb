@@ -1,19 +1,17 @@
 # anagram.rb
 
 class Anagram
-  attr_accessor :ba, :match
-  @@all = []
+  attr_accessor :word
 
-  def initialize(ba)
-    @ba = ba
+  def initialize(word)
+    @word = word
   end
 
   def match(array_of_possible_anagrams)
     array_of_possible_anagrams.select do |anagram|
-      if (anagram.split(//)).sort == (@ba.split(//)).sort
+      if anagram.split(//).sort == @word.split(//).sort
         anagram
       end
     end
   end
-
 end
