@@ -6,9 +6,9 @@ class Anagram
   
 
   def match(strings) 
-  letters =  @word.split("").collect {|letter| letter}
+  letters =  @word.split("")
     strings.select do |word|
-      word.split("").collect {|l| l}.sort == letters.sort
+      word.split("").sort == letters.sort
     end 
   end
 end 
