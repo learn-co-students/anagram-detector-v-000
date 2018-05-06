@@ -1,14 +1,14 @@
 require 'pry'
 # Your code goes here!
 class Anagram
-  attr_accessor :word
+  attr_reader :word
 
   def initialize(word)
     @word = word
   end
 
   def match(word)
-    word.select {|w| w.split("").sort == @word.split("").sort } 
+    word.select {|w| w.split("").sort == @word.split("").sort }
   end
 
 
