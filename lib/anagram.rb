@@ -11,5 +11,3 @@ class Anagram
 	end
 
 end
-
-#match.split.sort == word.split.sort
