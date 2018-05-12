@@ -9,15 +9,14 @@ def initialize(word)
   @word = word
 end
 
-def match(possible_anagrams)
-
-
-
+def match(possible_anagrams)#<= takes an array of possible anagrams
+binding.pry
 possible_anagrams.find_all do |words|
-      if words.split("").sort == self.word.split("").sort
+
+  if words.split("").sort == self.word.split("").sort
         words
 end
 end
 
 end
-end 
+end
