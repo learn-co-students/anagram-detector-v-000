@@ -6,7 +6,7 @@ class Anagram
   end
 
   def match(words)
-    sorted = self.word.chars.sort.join
-    words.select { |option| option.chars.sort.join == sorted }
+    sorted = self.word.split("").sort
+    words.select { |option| option.split("").sort == sorted }
   end
 end
