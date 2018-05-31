@@ -7,12 +7,8 @@ class Anagram
   
   def match(words)
     split_word = @anagram.split("").sort
-    arr = []
-    words.map { |word|
-      if word.split("").sort == split_word
-        arr << word
-      end
+    words.select { |word|
+      word.split("").sort == split_word
     }
-    arr
   end
 end
