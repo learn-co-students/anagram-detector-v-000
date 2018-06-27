@@ -6,17 +6,18 @@ class Anagram
 
 
 #build a reader & writer method using attr_accessor
-  attr_accessor :name
+  attr_accessor :word
 
-  initialize with a word
+  #initialize with a word and create an instance variable called @ word
 
   def initialize(word)
     @word = word
   end
 
 
-def match(array_of_words)
+# build a match method with a arg
 
+def match(array_of_words)
   array_of_words.select do|element|
     (@word.split("").sort) == (element.split("").sort)
   end
