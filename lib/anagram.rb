@@ -16,6 +16,9 @@ class Anagram
 
 
 # build a match method with a arg
+#using .select iterate over the array and compare the array
+#with the word in the instance variable by spliting it and sorting it.
+#it would then return the element that is an anagram
 
 def match(array_of_words)
   array_of_words.select do|element|
