@@ -13,6 +13,6 @@ class Anagram
   end
 
   def is_anagram?(word)
-    word.chars.sort == @word.chars.sort
+    word.split("").sort == @word.split("").sort
   end
 end
