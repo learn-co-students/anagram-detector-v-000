@@ -9,12 +9,11 @@ class Anagram
   def match(array)
     @@match.clear
     array.each do |word|
-      letters = word.split(//).sort
-        if @@word.split(//).sort == letters
-          @@match.push(word)
-        else
+      letters_array = word.split(//).sort
+        if @@word.split(//).sort == letters_array
+          @@match << word
         end
-    end
+      end
     @@match
   end
 
