@@ -1,4 +1,4 @@
-# Your code goes here!
+require 'pry'
 
 class Anagram
   
@@ -9,14 +9,17 @@ class Anagram
   end
   
   def match(list)
-    sort_word = @word.split().sort
-    list.collect do |l|
-      if l.split().sort == sort_word
-       return l
-      else
-        return []
+    sort_word = @word.split(//).sort
+    anagram_list = []
+    
+    list.each do |l|
+      list_word = l.split(//).sort
+      if  list_word == sort_word
+       anagram_list << l
       end
+       return anagram_list
     end
+  
   end
   
 end
