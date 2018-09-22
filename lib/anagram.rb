@@ -1,4 +1,4 @@
-'require pry'
+require 'pry'
 class Anagram
   attr_accessor :word 
   
@@ -6,10 +6,8 @@ class Anagram
     @word = word
   end 
   
-  def match(string) 
-    
-    %w(string).select do |string_word|
-      binding.pry
+  def match(string)
+    string.select do |string_word|
       string_word.split("").sort == @word.split("").sort 
     end
   end 
