@@ -9,6 +9,6 @@ class Anagram
   end
 
   def match(array)
-    array.keep_if { |str| name.split('').sort == str.split('').sort }
+    array.select {|x| x.split("").sort == @name.split("").sort}
   end
 end
