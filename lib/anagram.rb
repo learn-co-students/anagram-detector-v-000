@@ -11,9 +11,10 @@ class Anagram
   
  
   def match(array)
-    array.select {|x| x.split("").sort == x.split("").sort 
-    binding.pry
-    
+    array.select do |x| 
+      x.split("").sort == word.split("").sort 
+      # binding.pry
+    end
   end
   
 end
