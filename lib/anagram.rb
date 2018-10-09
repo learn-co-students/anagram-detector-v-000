@@ -1,5 +1,3 @@
-require 'pry'
-
 class Anagram 
   attr_accessor :word 
   
@@ -8,12 +6,10 @@ class Anagram
   end 
   
   def match(array)
-    array.each do |x|
-      if x.split("").sort == x 
-        x 
-      else 
-        array = []
-    end
-  end 
-  
+ 	  value = []
+    array.each do |x| 
+      value << x if x.split("").sort.join == word.split("").sort.join
+      end
+  	  value
+  end
 end 
