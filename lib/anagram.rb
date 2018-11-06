@@ -4,7 +4,7 @@ require 'pry'
 
 class Anagram
   
-  attr_accessor :match 
+  attr_accessor :word 
   
   def initialize(word)
     @word = word
@@ -18,11 +18,13 @@ class Anagram
 
     array.map do |anagrams|
     splitAnagram = anagrams.split("").sort
-    #binding.pry
-    splitWord == splitAnagram
-
+# binding.pry
+    if splitWord == splitAnagram
+      anagrams
     end
-    
+      
+    end
+   
 
   end
   
