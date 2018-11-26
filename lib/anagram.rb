@@ -13,19 +13,24 @@ class Anagram
   def match(array)
     #iterate over array 
     #compare each element of array to @word
+    
+    newArray = []
 
     splitWord = @word.split("").sort
 
-    array.map do |anagrams|
+    array.each do |anagrams|
+
     splitAnagram = anagrams.split("").sort
+
 # binding.pry
-    if splitWord == splitAnagram
-      anagrams
+
+    if splitWord === splitAnagram
+      newArray << anagrams
     end
       
     end
-   
-
+    
+    newArray
   end
   
   
