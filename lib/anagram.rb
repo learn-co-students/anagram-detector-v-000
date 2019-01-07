@@ -7,7 +7,6 @@ attr_accessor :does_this_word_have_an_anagram_here
 
   def initialize(does_this_word_have_an_anagram_here)
     @does_this_word_have_an_anagram_here = self.new 
-  end
 
   
     #WRITE A LOOP --> break down all letters in the word and see if they exactly match the letters of a different word(an anagram)
@@ -33,3 +32,8 @@ attr_accessor :does_this_word_have_an_anagram_here
   end
 
 end
+
+end
+
+end
+
