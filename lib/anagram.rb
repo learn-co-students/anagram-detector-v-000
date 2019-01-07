@@ -25,13 +25,11 @@ attr_accessor :does_this_word_have_an_anagram_here
       return array of all matching words
     else 
       return empty_array
+      end
     end
-    
     #WRITE CONDITIONAL CODE --> return an array of all matching words, if there are any, OR if no match, return empty array
   
   end
-
-end
 
 end
 
