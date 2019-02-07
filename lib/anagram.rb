@@ -7,37 +7,23 @@ class Anagram
   end
 
   def match(series)
-    word_sorted = @word.split(//).sort.join
-    #split the original word into characters, sort them, join them back together into a single string
+    initialized_word_sorted = @word.split(//).sort.join #<---split the word into individual characters (RegEx), put them in ABC order, join them back up into a gibberish word
+    series_word_sorted = []
+    matches = []
 
-    match = []
-    #create the flag / switch - to maintain state
+    series.each do |s_word|
+      series_word_sorted = s_word.split(//).sort.join
 
-    new_words = []
-
-    series.each do |w|
-      new_words << w.split(//).sort.join
-    end
-
-    new_words.each do |w2|
-      if w2 == word_sorted
-        match << @word
+      if series_word_sorted == initialized_word_sorted
+        matches << s_word
       else
         nil
       end
+
     end
 
-    match #<---implicit return
+    matches #<---implicit return
+
   end
 
-
 end #<---class end
-
-=begin
-takes initialized word and sorts it
-store it - word
-takes series of words and iterate through each one
-sort each word
-see if it matches the word
-return the match
-=end
