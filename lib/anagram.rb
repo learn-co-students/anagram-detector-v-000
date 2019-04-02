@@ -6,13 +6,11 @@ class Anagram
   end
 
   def match(anagrams)
-    #anagrams = []
-    #word.split("").sort
-    # anagrams
-    # if anagrams.sort == word.sort
     anagrams.select do |w|
-      if w == word.split("").sort
+      if w.split("").sort == word.split("").sort
+        anagrams
+      end
     end
   end
-  anagrams
+  
 end
