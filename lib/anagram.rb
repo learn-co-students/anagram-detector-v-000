@@ -1,1 +1,3 @@
-# Your code goes here!
+def hello
+  # Your code goes here!
+end
