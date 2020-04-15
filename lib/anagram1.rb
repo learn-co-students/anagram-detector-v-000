@@ -6,11 +6,12 @@ class Anagram
     @word = word
   end
 
-  def match(arr)
-    arr.select do |wor|
-      wor.chars.sort.join == @word.chars.sort.join
+  def match(array)
+    array.select do |w|
+      w.split("").sort == word.split("").sort
     end
   end
+
 
 
 end
