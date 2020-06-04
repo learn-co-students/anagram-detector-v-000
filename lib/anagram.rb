@@ -1,7 +1,6 @@
 # Your code goes here!
 require 'pry'
 
-
 class Anagram
   attr_accessor :word
 
@@ -10,12 +9,10 @@ class Anagram
   end
 
   def match(array)
-    word_array = @word.split("")
-    array.select do |w|
-      w_array = w.split("")
-      w_array.sort == word_array.sort
-      
+    array.select do |word|
+      word.split(/\s*/).sort == @word.split(/\s*/).sort
     end
   end
+
 
 end
